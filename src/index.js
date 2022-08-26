@@ -1,7 +1,7 @@
-const express = require('express');
 const bodyParser = require('body-parser');
 
-const app = express();
+const app = require('./app');
+
 app.use(bodyParser.json());
 
 const HTTP_OK_STATUS = 200;

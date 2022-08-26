@@ -33,7 +33,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-router.post('/', validateToken, addTalker, validateName,
-  validateAge, validateTalk, validateWatchedAt, validateRate);
+router.post('/', validateToken, validateName,
+  validateAge, validateTalk, validateWatchedAt, validateRate, addTalker);
 
 module.exports = router;

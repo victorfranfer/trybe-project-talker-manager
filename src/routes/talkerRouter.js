@@ -3,6 +3,7 @@ const { readFile } = require('../utils/readFile');
 const { addTalker } = require('../utils/addTalker');
 const { editTalker } = require('../utils/editTalker');
 const { deleteTalker } = require('../utils/deleteTalker');
+const { searchTalker } = require('../utils/searchTalker');
 const validateToken = require('../middlewares/validateToken');
 const validateName = require('../middlewares/validateName');
 const validateAge = require('../middlewares/validateAge');
@@ -11,6 +12,8 @@ const validateWatchedAt = require('../middlewares/validateWatchedAt');
 const validateRate = require('../middlewares/validateRate');
 
 const router = Router();
+
+router.get('/search', validateToken, searchTalker);
 
 router.get('/', async (_req, res) => {
   try {

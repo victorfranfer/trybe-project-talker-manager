@@ -1,6 +1,7 @@
 const { Router } = require('express');
 const { readFile } = require('../utils/readFile');
 const { addTalker } = require('../utils/addTalker');
+const { editTalker } = require('../utils/editTalker');
 const validateToken = require('../middlewares/validateToken');
 const validateName = require('../middlewares/validateName');
 const validateAge = require('../middlewares/validateAge');
@@ -35,5 +36,8 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', validateToken, validateName,
   validateAge, validateTalk, validateWatchedAt, validateRate, addTalker);
+
+router.put('/:id', validateToken, validateName,
+validateAge, validateTalk, validateWatchedAt, validateRate, editTalker);
 
 module.exports = router;

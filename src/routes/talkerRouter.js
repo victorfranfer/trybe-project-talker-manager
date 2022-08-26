@@ -2,6 +2,7 @@ const { Router } = require('express');
 const { readFile } = require('../utils/readFile');
 const { addTalker } = require('../utils/addTalker');
 const { editTalker } = require('../utils/editTalker');
+const { deleteTalker } = require('../utils/deleteTalker');
 const validateToken = require('../middlewares/validateToken');
 const validateName = require('../middlewares/validateName');
 const validateAge = require('../middlewares/validateAge');
@@ -39,5 +40,7 @@ router.post('/', validateToken, validateName,
 
 router.put('/:id', validateToken, validateName,
 validateAge, validateTalk, validateWatchedAt, validateRate, editTalker);
+
+router.delete('/:id', validateToken, deleteTalker);
 
 module.exports = router;

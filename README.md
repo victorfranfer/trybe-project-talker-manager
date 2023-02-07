@@ -1,4 +1,4 @@
-# :construction: README customizado em construção ! :construction:
+# Talker Manager - Trybe Project
 <!-- Olá, Tryber!
 Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
 
@@ -11,3 +11,6 @@ Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua cr
 - quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
 - quais arquivos/pastas foram desenvolvidos pela Trybe.
 -->
+Building the backend of an application to create, delete, edit and manage talkers for a list of lectures. Code in /src.
+
+Done in September 2022.
